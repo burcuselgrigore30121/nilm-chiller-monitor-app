@@ -18,12 +18,13 @@ from src.model import train_virtual_sensor, train_logistic_onoff
 from src.report import html_report
 
 app = FastAPI(title="NILM Chiller Monitor API")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
-        "https://nilm-chiller-monitor-app.vercel.app"
+        "https://nilm-chiller-monitor-app.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
