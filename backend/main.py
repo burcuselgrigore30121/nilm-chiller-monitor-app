@@ -19,7 +19,6 @@ from src.report import html_report
 
 app = FastAPI(title="NILM Chiller Monitor API")
 app.add_middleware(
-app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
